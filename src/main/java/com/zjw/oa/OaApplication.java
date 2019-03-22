@@ -1,4 +1,4 @@
-package com.yzy.pe;
+package com.zjw.oa;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
@@ -10,7 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author ZhengJiawei
  * @date 2019-03-21 10:48:00
  */
-@MapperScan("com.yzy.pe.mapper")
+@MapperScan("com.zjw.oa.mapper")
 @SpringBootApplication
 public class OaApplication {
 

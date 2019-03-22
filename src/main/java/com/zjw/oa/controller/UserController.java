@@ -1,7 +1,7 @@
-package com.yzy.pe.controller;
+package com.zjw.oa.controller;
 
-import com.yzy.pe.entity.User;
-import com.yzy.pe.service.UserService;
+import com.zjw.oa.entity.User;
+import com.zjw.oa.service.UserService;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

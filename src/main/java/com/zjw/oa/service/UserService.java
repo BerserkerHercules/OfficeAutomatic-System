@@ -1,6 +1,6 @@
-package com.yzy.pe.service;
+package com.zjw.oa.service;
 
-import com.yzy.pe.entity.User;
+import com.zjw.oa.entity.User;
 
 import java.util.List;
 

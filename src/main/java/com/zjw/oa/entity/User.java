@@ -1,4 +1,4 @@
-package com.yzy.pe.entity;
+package com.zjw.oa.entity;
 
 
 /**
