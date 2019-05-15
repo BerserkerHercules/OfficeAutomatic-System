@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zjw.oa.mapper.RwMapper">
+
+    <select id="myRw" resultType="com.zjw.oa.entity.Rw" parameterType="com.zjw.oa.entity.Rw">
+        select * from  rw where jsUserId=#{jsUserId}
+        <if test="rwmc!=null and rwmc!=''">
+            and remc like concat('%',#{rwmc},'%')
+        </if>
+        <if test="jjcd!=null and jjcd!=''">
+            and jjcd =#{jjcd}
+        </if>
+        order by rwTime desc
+    </select>
+
+    <select id="rwXq" resultType="com.zjw.oa.entity.Rw" parameterType="com.zjw.oa.entity.Rw">
+        select * from  rw where rwId=#{rwId}
+    </select>
+
+    <delete id="delRw" parameterType="com.zjw.oa.entity.Rw">
+        delete from rw where rwId=#{rwId}
+    </delete>
+
+    <update id="updateRw" parameterType="com.zjw.oa.entity.Rw">
+        update set
+    </update>
+
+</mapper>

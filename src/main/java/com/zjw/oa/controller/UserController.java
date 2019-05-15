@@ -1,12 +1,11 @@
 package com.zjw.oa.controller;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.zjw.oa.entity.User;
 import com.zjw.oa.service.UserService;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
@@ -33,19 +32,21 @@ public class UserController {
      * @author ZhengJiawei
      * @date 2019-03-21 09:06:08
      */
-    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    @RequestMapping(value = "/login")
     @ResponseBody
-    public ModelAndView login(User user) {
-        ModelAndView mav = new ModelAndView("login");
-
+    @CrossOrigin
+    public JSONObject login(@RequestBody User user) {
         User user1 = userService.login(user);
-        if (user1 == null) {
-            return mav;
+        if (user1 != null&&user1.getPermission()==1) {
+            return JSON.parseObject("{statusCode:200,user:{isAdmin:false,userName:\""+user1.getUserName()+"\"," +
+                    "userId:\"" + user1.getUserId() + "\"," +
+                    "permission:" + user1.getPermission() + "}}");
+        }else if(user1 != null){
+            return JSON.parseObject("{statusCode:200,user:{isAdmin:false,userName:\""+user1.getUserName()+"\"," +
+                    "userId:\"" + user1.getUserId() + "\"," +
+                    "permission:" + user1.getPermission() + "}}");
         }
-        mav.setViewName("index");
-        mav.addObject("user", user1);
-
-        return mav;
+        return JSON.parseObject("{statusCode:404}");
     }
 
     /**

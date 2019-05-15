@@ -1,62 +1,67 @@
 package com.zjw.oa.entity;
 
 
-/**
- * 用户实体类
- *
- * @author ZhengJiawei
- * @create 2019-02-13 11:13
- */
 public class User {
 
-    private String userId;
+  private long userId;
+  private String userName;
+  private String nikeName;
+  private String pwd;
+  private String zw;
+  private long permission;
 
-    private String userName;
 
-    private String pwd;
+  public long getUserId() {
+    return userId;
+  }
 
-    private String permissionDegree;
+  public void setUserId(long userId) {
+    this.userId = userId;
+  }
 
-    private String qdbm;
 
-    public String getUserId() {
-        return userId;
-    }
+  public String getUserName() {
+    return userName;
+  }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
-    }
+  public void setUserName(String userName) {
+    this.userName = userName;
+  }
 
-    public String getUserName() {
-        return userName;
-    }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
+  public String getNikeName() {
+    return nikeName;
+  }
 
-    public String getPwd() {
-        return pwd;
-    }
+  public void setNikeName(String nikeName) {
+    this.nikeName = nikeName;
+  }
 
-    public void setPwd(String pwd) {
-        this.pwd = pwd;
-    }
 
-    public String getPermissionDegree() {
-        return permissionDegree;
-    }
+  public String getPwd() {
+    return pwd;
+  }
 
-    public void setPermissionDegree(String permissionDegree) {
-        this.permissionDegree = permissionDegree;
-    }
+  public void setPwd(String pwd) {
+    this.pwd = pwd;
+  }
 
-    public String getQdbm() {
-        return qdbm;
-    }
 
-    public void setQdbm(String qdbm) {
-        this.qdbm = qdbm;
-    }
+  public String getZw() {
+    return zw;
+  }
+
+  public void setZw(String zw) {
+    this.zw = zw;
+  }
+
+
+  public long getPermission() {
+    return permission;
+  }
+
+  public void setPermission(long permission) {
+    this.permission = permission;
+  }
 
 }

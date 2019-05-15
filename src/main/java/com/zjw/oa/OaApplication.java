@@ -16,6 +16,7 @@ public class OaApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(OaApplication.class, args);
+        System.out.println("\nSpringboot have been started!");
     }
 
 }

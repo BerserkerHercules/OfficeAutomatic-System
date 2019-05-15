@@ -21,7 +21,7 @@ public class WebController {
      */
     @RequestMapping(value = "/")
     public String index() {
-        return "login";
+        return "redirect:/user/login";
     }
 
 }
