@@ -4,7 +4,7 @@ package com.zjw.oa.entity;
 public class Xmjd {
 
   private String xmmc;
-  private long xmjd;
+  private int xmjd;
   private int xmId;
 
 
@@ -17,11 +17,11 @@ public class Xmjd {
   }
 
 
-  public long getXmjd() {
+  public int getXmjd() {
     return xmjd;
   }
 
-  public void setXmjd(long xmjd) {
+  public void setXmjd(int xmjd) {
     this.xmjd = xmjd;
   }
 

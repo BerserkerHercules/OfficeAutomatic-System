@@ -3,17 +3,19 @@ package com.zjw.oa.entity;
 
 public class Hytz {
 
-  private long hyId;
+  private int hyId;
   private String hynr;
   private java.sql.Timestamp hyTime;
   private String hydd;
+  private int hybtzr;
+  private int hyztr;
 
 
-  public long getHyId() {
+  public int getHyId() {
     return hyId;
   }
 
-  public void setHyId(long hyId) {
+  public void setHyId(int hyId) {
     this.hyId = hyId;
   }
 
@@ -43,5 +45,7 @@ public class Hytz {
   public void setHydd(String hydd) {
     this.hydd = hydd;
   }
+
+
 
 }

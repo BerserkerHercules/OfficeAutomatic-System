@@ -3,18 +3,18 @@ package com.zjw.oa.entity;
 
 public class Gsgg {
 
-  private long ggId;
+  private int ggId;
   private String ggTitle;
   private String ggNr;
   private java.sql.Timestamp ggTime;
-  private long isZs;
+  private int isZs;
 
 
-  public long getGgId() {
+  public int getGgId() {
     return ggId;
   }
 
-  public void setGgId(long ggId) {
+  public void setGgId(int ggId) {
     this.ggId = ggId;
   }
 
@@ -46,11 +46,11 @@ public class Gsgg {
   }
 
 
-  public long getIsZs() {
+  public int getIsZs() {
     return isZs;
   }
 
-  public void setIsZs(long isZs) {
+  public void setIsZs(int isZs) {
     this.isZs = isZs;
   }
 

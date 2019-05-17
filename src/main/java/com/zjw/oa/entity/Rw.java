@@ -1,25 +1,27 @@
 package com.zjw.oa.entity;
 
 
+import java.sql.Date;
+
 public class Rw {
 
-  private long rwId;
+  private int rwId;
   private String rwmc;
   private String rwms;
-  private java.sql.Timestamp rwTime;
-  private long jsUserId;
-  private long fbUserId;
+  private Date rwTime;
+  private int jsUserId;
+  private int fbUserId;
   private String jsUserName;
   private String fbUserName;
   private int jjcd;
   private int isComplete;
 
 
-  public long getRwId() {
+  public int getRwId() {
     return rwId;
   }
 
-  public void setRwId(long rwId) {
+  public void setRwId(int rwId) {
     this.rwId = rwId;
   }
 
@@ -42,29 +44,29 @@ public class Rw {
   }
 
 
-  public java.sql.Timestamp getRwTime() {
+  public Date getRwTime() {
     return rwTime;
   }
 
-  public void setRwTime(java.sql.Timestamp rwTime) {
+  public void setRwTime(Date rwTime) {
     this.rwTime = rwTime;
   }
 
 
-  public long getJsUserId() {
+  public int getJsUserId() {
     return jsUserId;
   }
 
-  public void setJsUserId(long jsUserId) {
+  public void setJsUserId(int jsUserId) {
     this.jsUserId = jsUserId;
   }
 
 
-  public long getFbUserId() {
+  public int getFbUserId() {
     return fbUserId;
   }
 
-  public void setFbUserId(long fbUserId) {
+  public void setFbUserId(int fbUserId) {
     this.fbUserId = fbUserId;
   }
 

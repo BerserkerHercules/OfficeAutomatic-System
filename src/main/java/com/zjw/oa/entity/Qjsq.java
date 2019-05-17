@@ -5,7 +5,7 @@ import java.util.Date;
 
 public class Qjsq {
 
-  private long qjId;
+  private int qjId;
   private String qjyy;
   private String qjms;
   private Date ksTime;
@@ -14,11 +14,11 @@ public class Qjsq {
   private int userId;
 
 
-  public long getQjId() {
+  public int getQjId() {
     return qjId;
   }
 
-  public void setQjId(long qjId) {
+  public void setQjId(int qjId) {
     this.qjId = qjId;
   }
 

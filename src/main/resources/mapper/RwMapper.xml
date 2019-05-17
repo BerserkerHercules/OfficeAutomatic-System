@@ -57,4 +57,6 @@
         values(#{rwmc},#{rwms},#{rwTime},#{jsUserId},#{fbUserId},#{jsUserName},#{fbUserName})
     </insert>
 
+    <select id="getHytz" parameterType="com.zjw.oa.entity.Hytz" resultType=""
+
 </mapper>
