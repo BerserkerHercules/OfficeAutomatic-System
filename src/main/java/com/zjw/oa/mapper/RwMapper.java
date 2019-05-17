@@ -21,4 +21,8 @@ public interface RwMapper {
 
     void delRw(Rw rw)throws Exception;
 
+    void updateRw(Rw rw)throws Exception;
+
+    void addRw(Rw rw)throws Exception;
+
 }

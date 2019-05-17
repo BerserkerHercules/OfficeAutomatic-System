@@ -60,4 +60,16 @@ public class RwController {
         return JSON.parseObject("{success:true,msg:\"删除任务成功！\"}");
     }
 
+    @RequestMapping(value = "/updateRw")
+    @ResponseBody
+    @CrossOrigin
+    public JSONObject updateRw(@RequestBody Rw rw) {
+        try{
+            rwService.updateRw(rw);
+        }catch (Exception e){
+            return JSON.parseObject("{success:false,msg:\"编辑任务失败！\"}");
+        }
+        return JSON.parseObject("{success:true,msg:\"编辑任务成功！\"}");
+    }
+
 }

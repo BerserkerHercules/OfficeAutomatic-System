@@ -24,7 +24,37 @@
     </delete>
 
     <update id="updateRw" parameterType="com.zjw.oa.entity.Rw">
-        update set
+        update set rwId=#{rwId}
+        <if test="rwmc!=null and rwmc!=''">
+            , rwmc =#{rwmc}
+        </if>
+        <if test="rwms!=null and rwms!=''">
+            , rwms =#{rwms}
+        </if>
+        <if test="rwTime!=null and rwTime!=''">
+            , rwTime =#{rwTime}
+        </if>
+        <if test="jsUserId!=null and jsUserId!=''">
+            , jsUserId =#{jsUserId}
+        </if>
+        <if test="jsUserName!=null and jsUserName!=''">
+            , jsUserName =#{jsUserName}
+        </if>
+        <if test="fbUserId!=null and fbUserId!=''">
+            , fbUserId =#{fbUserId}
+        </if>
+        <if test="fbUserName!=null and fbUserName!=''">
+            , fbUserName =#{fbUserName}
+        </if>
+        <if test="jjcd!=null and jjcd!=''">
+            , jjcd =#{jjcd}
+        </if>
+        from rw where rwId=#{rwId}
     </update>
+
+    <insert id="addRw" parameterType="com.zjw.oa.entity.Rw">
+        insert into rw(rwmc, rwms, rwTime, jsUserId, fbUserId, jsUserName, fbUserName)
+        values(#{rwmc},#{rwms},#{rwTime},#{jsUserId},#{fbUserId},#{jsUserName},#{fbUserName})
+    </insert>
 
 </mapper>

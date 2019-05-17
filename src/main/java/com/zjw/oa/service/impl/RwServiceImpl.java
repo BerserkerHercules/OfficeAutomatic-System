@@ -39,4 +39,8 @@ public class RwServiceImpl implements RwService {
         rwMapper.delRw(rw);
     }
 
+    @Override
+    public void updateRw(Rw rw) throws Exception {
+        rwMapper.updateRw(rw);
+    }
 }

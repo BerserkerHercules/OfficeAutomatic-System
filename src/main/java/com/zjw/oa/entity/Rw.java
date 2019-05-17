@@ -12,6 +12,7 @@ public class Rw {
   private String jsUserName;
   private String fbUserName;
   private int jjcd;
+  private int isComplete;
 
 
   public long getRwId() {
@@ -91,5 +92,13 @@ public class Rw {
 
   public void setJjcd(int jjcd) {
     this.jjcd = jjcd;
+  }
+
+  public int getIsComplete() {
+    return isComplete;
+  }
+
+  public void setIsComplete(int isComplete) {
+    this.isComplete = isComplete;
   }
 }

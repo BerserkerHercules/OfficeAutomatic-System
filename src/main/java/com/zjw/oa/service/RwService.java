@@ -17,4 +17,5 @@ public interface RwService {
     List<Rw> myRw(Rw rw);
     Rw rwXq(Rw rw);
     void delRw(Rw rw)throws Exception;
+    void updateRw(Rw rw)throws Exception;
 }
