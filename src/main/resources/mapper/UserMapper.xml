@@ -15,10 +15,21 @@
     </select>
 
     <select id="getUserList" resultType="com.zjw.oa.entity.User" parameterType="com.zjw.oa.entity.User">
-        SELECT
-        *
-        FROM
-        user
+        SELECT * FROM user where permission=3
+        <if test="userName!=null and userName!=''">
+            and userName like concat('%',#{userName},'%')
+        </if>
+    </select>
+
+    <insert id="addDk" parameterType="com.wyc.hm.entity.Dk">
+        insert into dk(userId, dkTime) values(#{userId},#{dkTime})
+    </insert>
+
+    <select id="getDkList" parameterType="com.wyc.hm.entity.Dto.UserDto" resultType="com.wyc.hm.entity.Dto.UserDto">
+        select d.dkTime,u.* from dk d,user u where u.userId=d.userId
+        <if test="userId!=null and userId!=''">
+            and userId=#{userId}
+        </if>
     </select>
 
 </mapper>

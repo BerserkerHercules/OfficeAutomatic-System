@@ -1,5 +1,7 @@
 package com.zjw.oa.service.impl;
 
+import com.zjw.oa.entity.Dk;
+import com.zjw.oa.entity.Dto.UserDto;
 import com.zjw.oa.mapper.UserMapper;
 import com.zjw.oa.entity.User;
 import com.zjw.oa.service.UserService;
@@ -27,8 +29,19 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<User> getUserList() {
-        return userMapper.getUserList();
+    public List<User> getUserList(User user) {
+        return userMapper.getUserList(user);
     }
+
+    @Override
+    public void addDk(Dk dk) throws Exception {
+        userMapper.addDk(dk);
+    }
+
+    @Override
+    public List<UserDto> getDkList(UserDto userDto) {
+        return userMapper.getDkList(userDto);
+    }
+
 
 }

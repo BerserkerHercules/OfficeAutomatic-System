@@ -1,5 +1,7 @@
 package com.zjw.oa.service;
 
+import com.zjw.oa.entity.Dk;
+import com.zjw.oa.entity.Dto.UserDto;
 import com.zjw.oa.entity.User;
 
 import java.util.List;
@@ -12,23 +14,12 @@ import java.util.List;
  */
 public interface UserService {
 
-    /**
-     * Description 登录
-     *
-     * @param user 用户输入数据
-     * @return User
-     * @author ZhengJiawei
-     * @date 2019-03-22 14:14:27
-     */
     User login(User user);
 
-    /**
-     * Description
-     *
-     * @return List<User>
-     * @author ZhengJiawei
-     * @date 2019-03-22 14:15:14
-     */
-    List<User> getUserList();
+    List<User> getUserList(User user);
+
+    void addDk(Dk dk) throws Exception;
+
+    List<UserDto> getDkList(UserDto userDto);
 
 }

@@ -1,14 +1,20 @@
 package com.zjw.oa.controller;
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.zjw.oa.entity.Dk;
+import com.zjw.oa.entity.Dto.UserDto;
+import com.zjw.oa.entity.Qjsq;
 import com.zjw.oa.entity.User;
 import com.zjw.oa.service.UserService;
+import com.zjw.oa.util.JsonUtil;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * Description
@@ -55,14 +61,34 @@ public class UserController {
      * @author ZhengJiawei
      * @date 2019-03-22 10:50:47
      */
-    @RequestMapping(value = "/getUserList", method = RequestMethod.POST)
+    @RequestMapping(value = "/userList")
     @ResponseBody
-    public ModelAndView getUserList() {
-        ModelAndView mav = new ModelAndView("index1");
+    @CrossOrigin
+    public JSONArray getUserList(@RequestBody User user) {
+        List<User> list = userService.getUserList(user);
+        String jsonStr = JsonUtil.serializeDate(list);
+        return JSON.parseArray(jsonStr);
+    }
 
-        mav.addObject("userList", userService.getUserList());
+    @RequestMapping(value = "/addDk")
+    @ResponseBody
+    @CrossOrigin
+    public JSONObject addDk(@RequestBody Dk dk) {
+        try{
+            userService.addDk(dk);
+        }catch (Exception e){
+            return JSON.parseObject("{success:false,msg:\"打卡失败！\"}");
+        }
+        return JSON.parseObject("{success:true,msg:\"打卡成功！\"}");
+    }
 
-        return mav;
+    @RequestMapping(value = "/getDkList")
+    @ResponseBody
+    @CrossOrigin
+    public JSONArray getDkList(@RequestBody UserDto userDto) {
+        List<UserDto> list = userService.getDkList(userDto);
+        String jsonStr = JsonUtil.serializeDate(list);
+        return JSON.parseArray(jsonStr);
     }
 
 }
