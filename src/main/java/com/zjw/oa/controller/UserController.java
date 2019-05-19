@@ -5,13 +5,11 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.zjw.oa.entity.Dk;
 import com.zjw.oa.entity.Dto.UserDto;
-import com.zjw.oa.entity.Qjsq;
 import com.zjw.oa.entity.User;
 import com.zjw.oa.service.UserService;
 import com.zjw.oa.util.JsonUtil;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
 import java.util.List;

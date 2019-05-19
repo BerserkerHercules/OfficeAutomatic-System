@@ -21,11 +21,11 @@
         </if>
     </select>
 
-    <insert id="addDk" parameterType="com.wyc.hm.entity.Dk">
+    <insert id="addDk" parameterType="com.zjw.oa.entity.Dk">
         insert into dk(userId, dkTime) values(#{userId},#{dkTime})
     </insert>
 
-    <select id="getDkList" parameterType="com.wyc.hm.entity.Dto.UserDto" resultType="com.wyc.hm.entity.Dto.UserDto">
+    <select id="getDkList" parameterType="com.zjw.oa.entity.Dto.UserDto" resultType="com.zjw.oa.entity.Dto.UserDto">
         select d.dkTime,u.* from dk d,user u where u.userId=d.userId
         <if test="userId!=null and userId!=''">
             and userId=#{userId}

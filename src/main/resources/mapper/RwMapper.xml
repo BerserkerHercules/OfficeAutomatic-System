@@ -57,6 +57,8 @@
         values(#{rwmc},#{rwms},#{rwTime},#{jsUserId},#{fbUserId},#{jsUserName},#{fbUserName})
     </insert>
 
-    <select id="getHytz" parameterType="com.zjw.oa.entity.Hytz" resultType=""
+    <select id="getHytz" parameterType="com.zjw.oa.entity.Hytz" resultType="com.zjw.oa.entity.Hytz">
+        select * from hyzt
+    </select>
 
 </mapper>

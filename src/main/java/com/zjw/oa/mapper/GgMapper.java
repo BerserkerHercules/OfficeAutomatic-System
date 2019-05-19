@@ -1,7 +1,6 @@
 package com.zjw.oa.mapper;
 
 import com.zjw.oa.entity.Gsgg;
-import com.zjw.oa.entity.User;
 import com.zjw.oa.entity.Xmjd;
 import org.apache.ibatis.annotations.Mapper;
 

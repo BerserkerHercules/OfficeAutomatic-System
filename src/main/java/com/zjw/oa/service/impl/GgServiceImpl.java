@@ -1,12 +1,9 @@
 package com.zjw.oa.service.impl;
 
 import com.zjw.oa.entity.Gsgg;
-import com.zjw.oa.entity.User;
 import com.zjw.oa.entity.Xmjd;
 import com.zjw.oa.mapper.GgMapper;
-import com.zjw.oa.mapper.UserMapper;
 import com.zjw.oa.service.GgService;
-import com.zjw.oa.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,7 +1,6 @@
 package com.zjw.oa.service;
 
 import com.zjw.oa.entity.Gsgg;
-import com.zjw.oa.entity.User;
 import com.zjw.oa.entity.Xmjd;
 
 import java.util.List;

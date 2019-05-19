@@ -3,15 +3,11 @@ package com.zjw.oa.controller;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.zjw.oa.entity.Gsgg;
 import com.zjw.oa.entity.Rw;
-import com.zjw.oa.entity.Xmjd;
-import com.zjw.oa.service.GgService;
 import com.zjw.oa.service.RwService;
 import com.zjw.oa.util.JsonUtil;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.web.bind.annotation.*;
-
 import javax.annotation.Resource;
 import java.util.List;
 
@@ -30,6 +26,11 @@ public class RwController {
     private RwService rwService;
 
 
+    /**
+     * 查看自己的工作任务 - 列表
+     * @param rw
+     * @return
+     */
     @RequestMapping(value = "/myRw")
     @ResponseBody
     @CrossOrigin
@@ -39,6 +40,11 @@ public class RwController {
         return JSON.parseArray(jsonStr);
     }
 
+    /**
+     * 查看自己的工作任务 - 详情
+     * @param rw
+     * @return
+     */
     @RequestMapping(value = "/rwXq")
     @ResponseBody
     @CrossOrigin
@@ -48,6 +54,11 @@ public class RwController {
         return JSON.parseObject(jsonStr);
     }
 
+    /**
+     * 删除任务 - 权限
+     * @param rw
+     * @return
+     */
     @RequestMapping(value = "/delRw")
     @ResponseBody
     @CrossOrigin
@@ -60,6 +71,11 @@ public class RwController {
         return JSON.parseObject("{success:true,msg:\"删除任务成功！\"}");
     }
 
+    /**
+     * 更新任务 - 权限
+     * @param rw
+     * @return
+     */
     @RequestMapping(value = "/updateRw")
     @ResponseBody
     @CrossOrigin
