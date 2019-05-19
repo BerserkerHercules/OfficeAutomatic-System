@@ -16,4 +16,5 @@ public interface RwService {
     Rw rwXq(Rw rw);
     void delRw(Rw rw)throws Exception;
     void updateRw(Rw rw)throws Exception;
+    void addRw(Rw rw)throws Exception;
 }

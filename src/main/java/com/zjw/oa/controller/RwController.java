@@ -88,4 +88,21 @@ public class RwController {
         return JSON.parseObject("{success:true,msg:\"编辑任务成功！\"}");
     }
 
+    /**
+     * 添加任务 - 权限
+     * @param rw
+     * @return
+     */
+    @RequestMapping(value = "/addRw")
+    @ResponseBody
+    @CrossOrigin
+    public JSONObject addRw(@RequestBody Rw rw) {
+        try{
+            rwService.addRw(rw);
+        }catch (Exception e){
+            return JSON.parseObject("{success:false,msg:\"添加任务失败！\"}");
+        }
+        return JSON.parseObject("{success:true,msg:\"添加任务成功！\"}");
+    }
+
 }
