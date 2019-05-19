@@ -30,6 +30,11 @@ public class QjsqController {
     @Resource
     private QjsqService qjsqService;
 
+    /**
+     * 向上级申请请假（原因，时间，是否被批准）；
+     * @param qjsq
+     * @return
+     */
     @RequestMapping(value = "/addQjsq")
     @CrossOrigin
     public JSONObject addQj(@RequestBody Qjsq qjsq) {
@@ -44,6 +49,11 @@ public class QjsqController {
         return jsonObject;
     }
 
+    /**
+     * 请假列表
+     * @param qjsq
+     * @return
+     */
     @RequestMapping(value = "/getQjList")
     @CrossOrigin
     public JSONArray getQjList(@RequestBody Qjsq qjsq) {
@@ -52,6 +62,11 @@ public class QjsqController {
         return JSON.parseArray(jsonStr);
     }
 
+    /**
+     * 请假详情
+     * @param qjsq
+     * @return
+     */
     @RequestMapping(value = "/getQjXx")
     @CrossOrigin
     public JSONObject getQjXx(@RequestBody Qjsq qjsq) {
@@ -60,6 +75,11 @@ public class QjsqController {
         return JSON.parseObject(jsonStr);
     }
 
+    /**
+     * 批准下级员工的请假申请；（权限）
+     * @param qjsq
+     * @return
+     */
     @RequestMapping(value = "/agreeQj")
     @CrossOrigin
     public JSONObject agreeQj(@RequestBody Qjsq qjsq) {

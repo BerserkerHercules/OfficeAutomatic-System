@@ -3,19 +3,20 @@ package com.zjw.oa.entity;
 
 public class User {
 
-  private int userId;
+  private long userId;
   private String userName;
   private String nikeName;
   private String pwd;
   private String zw;
-  private int permission;
+  private long permission;
+  private long sjUserId;
 
 
-  public int getUserId() {
+  public long getUserId() {
     return userId;
   }
 
-  public void setUserId(int userId) {
+  public void setUserId(long userId) {
     this.userId = userId;
   }
 
@@ -56,12 +57,21 @@ public class User {
   }
 
 
-  public int getPermission() {
+  public long getPermission() {
     return permission;
   }
 
-  public void setPermission(int permission) {
+  public void setPermission(long permission) {
     this.permission = permission;
+  }
+
+
+  public long getSjUserId() {
+    return sjUserId;
+  }
+
+  public void setSjUserId(long sjUserId) {
+    this.sjUserId = sjUserId;
   }
 
 }

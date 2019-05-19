@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.zjw.oa.entity.Rw;
+import com.zjw.oa.entity.Rz;
 import com.zjw.oa.service.RwService;
 import com.zjw.oa.util.JsonUtil;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -103,6 +104,37 @@ public class RwController {
             return JSON.parseObject("{success:false,msg:\"添加任务失败！\"}");
         }
         return JSON.parseObject("{success:true,msg:\"添加任务成功！\"}");
+    }
+
+    /**
+     * 查看日志 - 列表
+     * @param rz
+     * @return
+     */
+    @RequestMapping(value = "/rzList")
+    @ResponseBody
+    @CrossOrigin
+    public JSONArray rzList(@RequestBody Rz rz) {
+        List<Rz> list = rwService.rzList(rz);
+        String jsonStr = JsonUtil.serializeDate(list);
+        return JSON.parseArray(jsonStr);
+    }
+
+    /**
+     * 添加日志
+     * @param rz
+     * @return
+     */
+    @RequestMapping(value = "/addRz")
+    @ResponseBody
+    @CrossOrigin
+    public JSONObject addRz(@RequestBody Rz rz) {
+        try{
+            rwService.addRz(rz);
+        }catch (Exception e){
+            return JSON.parseObject("{success:false,msg:\"添加日志失败！\"}");
+        }
+        return JSON.parseObject("{success:true,msg:\"添加日志成功！\"}");
     }
 
 }

@@ -1,6 +1,7 @@
 package com.zjw.oa.service;
 
 import com.zjw.oa.entity.Rw;
+import com.zjw.oa.entity.Rz;
 
 import java.util.List;
 
@@ -17,4 +18,6 @@ public interface RwService {
     void delRw(Rw rw)throws Exception;
     void updateRw(Rw rw)throws Exception;
     void addRw(Rw rw)throws Exception;
+    List<Rz> rzList(Rz rz);
+    void addRz(Rz rz)throws Exception;
 }
