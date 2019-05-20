@@ -5,7 +5,7 @@
 <mapper namespace="com.zjw.oa.mapper.RwMapper">
 
     <select id="myRw" resultType="com.zjw.oa.entity.Rw" parameterType="com.zjw.oa.entity.Rw">
-        select * from  rw where jsUserId=#{jsUserId}
+        select r.*,u.userName as jsUserName  from  rw r,user u where r.jsUserId=u.userId and jsUserId=#{jsUserId}
         <if test="rwmc!=null and rwmc!=''">
             and remc like concat('%',#{rwmc},'%')
         </if>
@@ -24,32 +24,8 @@
     </delete>
 
     <update id="updateRw" parameterType="com.zjw.oa.entity.Rw">
-        update set rwId=#{rwId}
-        <if test="rwmc!=null and rwmc!=''">
-            , rwmc =#{rwmc}
-        </if>
-        <if test="rwms!=null and rwms!=''">
-            , rwms =#{rwms}
-        </if>
-        <if test="rwTime!=null and rwTime!=''">
-            , rwTime =#{rwTime}
-        </if>
-        <if test="jsUserId!=null and jsUserId!=''">
-            , jsUserId =#{jsUserId}
-        </if>
-        <if test="jsUserName!=null and jsUserName!=''">
-            , jsUserName =#{jsUserName}
-        </if>
-        <if test="fbUserId!=null and fbUserId!=''">
-            , fbUserId =#{fbUserId}
-        </if>
-        <if test="fbUserName!=null and fbUserName!=''">
-            , fbUserName =#{fbUserName}
-        </if>
-        <if test="jjcd!=null and jjcd!=''">
-            , jjcd =#{jjcd}
-        </if>
-        from rw where rwId=#{rwId}
+        update rw set rwId=#{rwId}, rwmc =#{rwmc} , rwms =#{rwms}, rwTime =#{rwTime},
+        jsUserId =#{jsUserId}, fbUserId =#{fbUserId}, jjcd =#{jjcd} where rwId=#{rwId}
     </update>
 
     <insert id="addRw" parameterType="com.zjw.oa.entity.Rw">

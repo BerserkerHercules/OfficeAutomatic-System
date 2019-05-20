@@ -14,6 +14,15 @@
         and pwd = #{pwd}
     </select>
 
+    <select id="getUser" resultType="com.zjw.oa.entity.User" parameterType="com.zjw.oa.entity.User">
+        SELECT
+        *
+        FROM
+        user
+        WHERE
+        userId = #{userId}
+    </select>
+
     <select id="getUserList" resultType="com.zjw.oa.entity.User" parameterType="com.zjw.oa.entity.User">
         SELECT * FROM user where permission=3
         <if test="userName!=null and userName!=''">

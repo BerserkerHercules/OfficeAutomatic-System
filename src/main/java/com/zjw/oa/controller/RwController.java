@@ -35,7 +35,7 @@ public class RwController {
     @RequestMapping(value = "/myRw")
     @ResponseBody
     @CrossOrigin
-    public JSONArray myRw(@RequestBody Rw rw) {
+    public JSONArray myRw(Rw rw) {
         List<Rw> list = rwService.myRw(rw);
         String jsonStr = JsonUtil.serializeDate(list);
         return JSON.parseArray(jsonStr);
@@ -49,7 +49,7 @@ public class RwController {
     @RequestMapping(value = "/rwXq")
     @ResponseBody
     @CrossOrigin
-    public JSONObject rwXq(@RequestBody Rw rw) {
+    public JSONObject rwXq(Rw rw) {
         Rw rw1 = rwService.rwXq(rw);
         String jsonStr = JsonUtil.serialize(rw1);
         return JSON.parseObject(jsonStr);
@@ -63,7 +63,7 @@ public class RwController {
     @RequestMapping(value = "/delRw")
     @ResponseBody
     @CrossOrigin
-    public JSONObject delRw(@RequestBody Rw rw) {
+    public JSONObject delRw(Rw rw) {
         try{
             rwService.delRw(rw);
         }catch (Exception e){
@@ -73,14 +73,14 @@ public class RwController {
     }
 
     /**
-     * 更新任务 - 权限
+     * 修改任务 - 权限
      * @param rw
      * @return
      */
     @RequestMapping(value = "/updateRw")
     @ResponseBody
     @CrossOrigin
-    public JSONObject updateRw(@RequestBody Rw rw) {
+    public JSONObject updateRw(Rw rw) {
         try{
             rwService.updateRw(rw);
         }catch (Exception e){
@@ -97,7 +97,7 @@ public class RwController {
     @RequestMapping(value = "/addRw")
     @ResponseBody
     @CrossOrigin
-    public JSONObject addRw(@RequestBody Rw rw) {
+    public JSONObject addRw(Rw rw) {
         try{
             rwService.addRw(rw);
         }catch (Exception e){

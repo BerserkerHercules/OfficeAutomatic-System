@@ -25,7 +25,7 @@
     </select>
 
     <update id="agreeQj" parameterType="com.zjw.oa.entity.Qjsq">
-        update set qjzt=#{qjzt} from qjsq where userId=#{userId}
+        update qjsq set qjzt=#{qjzt} where userId=#{userId}
     </update>
 
 </mapper>

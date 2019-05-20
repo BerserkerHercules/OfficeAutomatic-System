@@ -24,4 +24,6 @@ public interface UserMapper {
 
     List<UserDto> getDkList(UserDto userDto);
 
+    User getUser(User user);
+
 }
