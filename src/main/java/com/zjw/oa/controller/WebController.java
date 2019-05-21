@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
@@ -27,9 +28,14 @@ public class WebController {
      * @author ZhengJiawei
      * @date 2019-03-20 16:28:37
      */
-    @RequestMapping(value = "/")
+    /*@RequestMapping(value = "/")
     public String index() {
         return "redirect:/user/login";
+    }*/
+    @RequestMapping(value = "/")
+    @ResponseBody
+    public ModelAndView index() {
+        return new ModelAndView("index");
     }
 
     @RequestMapping("/uploadFile")
@@ -67,7 +73,8 @@ public class WebController {
 
     @RequestMapping("/downloadFile")
     @ResponseBody
-    public String downloadFile(HttpServletResponse response, @RequestParam("fileName") String filePathName) {
+    public String downloadFile(HttpServletResponse response) {
+        String filePathName = "D:/Users/Downloads/cc.txt";
         File file = new File(filePathName);
         if (!file.exists()) {
             return "-1";

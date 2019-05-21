@@ -41,4 +41,12 @@
         </if>
     </select>
 
+    <select id="hysList" resultType="com.zjw.oa.entity.Hys">
+        select * from hys
+    </select>
+
+    <update id="updateHys" parameterType="com.zjw.oa.entity.Hys">
+        update hys set hyszt=#{hyszt},bz=#{bz} where hysbh=#{hysbh}
+    </update>
+
 </mapper>

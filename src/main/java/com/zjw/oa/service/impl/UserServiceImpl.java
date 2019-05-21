@@ -2,6 +2,7 @@ package com.zjw.oa.service.impl;
 
 import com.zjw.oa.entity.Dk;
 import com.zjw.oa.entity.Dto.UserDto;
+import com.zjw.oa.entity.Hys;
 import com.zjw.oa.mapper.UserMapper;
 import com.zjw.oa.entity.User;
 import com.zjw.oa.service.UserService;
@@ -43,5 +44,19 @@ public class UserServiceImpl implements UserService {
         return userMapper.getDkList(userDto);
     }
 
+    @Override
+    public List<Hys> hysList() {
+        return userMapper.hysList();
+    }
+
+    @Override
+    public void updateHys(Hys hys) throws Exception {
+        userMapper.updateHys(hys);
+    }
+
+    @Override
+    public User getUser(User user) {
+        return userMapper.getUser(user);
+    }
 
 }

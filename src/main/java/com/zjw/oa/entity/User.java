@@ -10,6 +10,7 @@ public class User {
   private String zw;
   private long permission;
   private long sjUserId;
+  private String phone;
 
 
   public long getUserId() {
@@ -74,4 +75,11 @@ public class User {
     this.sjUserId = sjUserId;
   }
 
+  public String getPhone() {
+    return phone;
+  }
+
+  public void setPhone(String phone) {
+    this.phone = phone;
+  }
 }

@@ -132,7 +132,7 @@ public class RwController {
     @RequestMapping(value = "/addRz")
     @ResponseBody
     @CrossOrigin
-    public JSONObject addRz(@RequestBody Rz rz) {
+    public JSONObject addRz(Rz rz) {
         try{
             rwService.addRz(rz);
         }catch (Exception e){
