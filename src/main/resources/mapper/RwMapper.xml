@@ -5,7 +5,8 @@
 <mapper namespace="com.zjw.oa.mapper.RwMapper">
 
     <select id="myRw" resultType="com.zjw.oa.entity.Rw" parameterType="com.zjw.oa.entity.Rw">
-        select r.*,u.userName as jsUserName  from  rw r,user u where r.jsUserId=u.userId and jsUserId=#{jsUserId}
+        select r.rwId,r.rwmc,r.rwms,r.rwTime,r.jsUserId,r.fbUserId,r.jjcd,r.isComplete,
+        u.userName as jsUserName  from  rw r,user u where r.jsUserId=u.userId and jsUserId=#{jsUserId}
         <if test="rwmc!=null and rwmc!=''">
             and remc like concat('%',#{rwmc},'%')
         </if>

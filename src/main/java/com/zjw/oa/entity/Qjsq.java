@@ -5,20 +5,21 @@ import java.util.Date;
 
 public class Qjsq {
 
-  private int qjId;
+  private long qjId;
   private String qjyy;
   private String qjms;
   private Date ksTime;
   private Date jsTime;
   private String qjzt;
   private int userId;
+  private String userName;
 
 
-  public int getQjId() {
+  public long getQjId() {
     return qjId;
   }
 
-  public void setQjId(int qjId) {
+  public void setQjId(long qjId) {
     this.qjId = qjId;
   }
 
@@ -73,5 +74,13 @@ public class Qjsq {
 
   public void setUserId(int userId) {
     this.userId = userId;
+  }
+
+  public String getUserName() {
+    return userName;
+  }
+
+  public void setUserName(String userName) {
+    this.userName = userName;
   }
 }

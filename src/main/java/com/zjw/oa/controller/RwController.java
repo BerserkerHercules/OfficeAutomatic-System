@@ -108,13 +108,13 @@ public class RwController {
 
     /**
      * 查看日志 - 列表
-     * @param rz
      * @return
      */
     @RequestMapping(value = "/rzList")
     @ResponseBody
     @CrossOrigin
-    public JSONArray rzList(@RequestBody Rz rz) {
+    public JSONArray rzList() {
+        Rz rz = new Rz();
         List<Rz> list = rwService.rzList(rz);
         String jsonStr = JsonUtil.serializeDate(list);
         return JSON.parseArray(jsonStr);

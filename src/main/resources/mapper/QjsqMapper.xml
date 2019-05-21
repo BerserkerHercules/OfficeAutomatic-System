@@ -10,22 +10,22 @@
     </insert>
 
     <select id="getQjList" resultType="com.zjw.oa.entity.Qjsq" parameterType="com.zjw.oa.entity.Qjsq">
-        select qjId,userId,ksTime,qjzt,qjyy from qjsq where 1=1
-         <if test="userId!=null and userId !=''">
-             and userId=#{userId}
-         </if>
-         order by ksTime
+        select q.*,u.userName from qjsq q,user u where q.userId=u.userId
+        <if test="userId!=null and userId !=''">
+            and u.userId=#{userId}
+        </if>
+        order by ksTime
     </select>
 
     <select id="getQj" parameterType="com.zjw.oa.entity.Qjsq"  resultType="com.zjw.oa.entity.Qjsq">
-        select userId,ksTime,qjzt,qjyy,qjms,jsTime from qjsq where 1=1
+        select * from qjsq where 1=1
         <if test="qjId!=null and qjId !=''">
             and qjId=#{qjId}
         </if>
     </select>
 
     <update id="agreeQj" parameterType="com.zjw.oa.entity.Qjsq">
-        update qjsq set qjzt=#{qjzt} where userId=#{userId}
+        update qjsq set qjzt=#{qjzt} where qjId=#{qjId}
     </update>
 
 </mapper>

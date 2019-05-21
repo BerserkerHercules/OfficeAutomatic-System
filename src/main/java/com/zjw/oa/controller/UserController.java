@@ -43,11 +43,13 @@ public class UserController {
         User user1 = userService.login(user);
         if (user1 != null&&user1.getPermission()==1) {
             return JSON.parseObject("{statusCode:200,user:{isAdmin:false,userName:\""+user1.getUserName()+"\"," +
+                    "zw:\"" + user1.getZw() + "\"," +
                     "userId:\"" + user1.getUserId() + "\"," +
                     "permission:" + user1.getPermission() + "}}");
         }else if(user1 != null){
             return JSON.parseObject("{statusCode:200,user:{isAdmin:false,userName:\""+user1.getUserName()+"\"," +
                     "userId:\"" + user1.getUserId() + "\"," +
+                    "zw:\"" + user1.getZw() + "\"," +
                     "permission:" + user1.getPermission() + "}}");
         }
         return JSON.parseObject("{statusCode:404}");
