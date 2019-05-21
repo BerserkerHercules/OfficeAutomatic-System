@@ -4,6 +4,7 @@ package com.zjw.oa.mapper;
 import com.zjw.oa.entity.Rw;
 import com.zjw.oa.entity.Rz;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -26,7 +27,7 @@ public interface RwMapper {
 
     void addRw(Rw rw)throws Exception;
 
-    List<Rz> rzList(Rz rz);
+    List<Rz> rzList(@Param("rzTime") String rz);
 
     void addRz(Rz rz)throws Exception;
 

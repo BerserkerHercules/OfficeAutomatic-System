@@ -59,7 +59,7 @@ public class RwServiceImpl implements RwService {
     }
 
     @Override
-    public List<Rz> rzList(Rz rz) {
+    public List<Rz> rzList(String rz) {
         return rwMapper.rzList(rz);
     }
 

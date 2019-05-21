@@ -9,7 +9,11 @@ import com.zjw.oa.service.RwService;
 import com.zjw.oa.util.JsonUtil;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.web.bind.annotation.*;
+
 import javax.annotation.Resource;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -113,9 +117,9 @@ public class RwController {
     @RequestMapping(value = "/rzList")
     @ResponseBody
     @CrossOrigin
-    public JSONArray rzList() {
-        Rz rz = new Rz();
-        List<Rz> list = rwService.rzList(rz);
+    public JSONArray rzList(String rzTime) {
+
+        List<Rz> list = rwService.rzList(rzTime);
         String jsonStr = JsonUtil.serializeDate(list);
         return JSON.parseArray(jsonStr);
     }
@@ -137,4 +141,12 @@ public class RwController {
         return JSON.parseObject("{success:true,msg:\"添加日志成功！\"}");
     }
 
+    public static void  main(String[] args) throws ParseException {
+        String string = "2016-10-24 21:59:06";
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Date date = sdf.parse(string);
+        System.out.println(date.getTime());
+        java.sql.Date date2 = new java.sql.Date(date.getTime());
+        System.out.println(date2);
+    }
 }

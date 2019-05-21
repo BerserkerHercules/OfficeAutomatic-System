@@ -38,13 +38,10 @@
         select * from hyzt
     </select>
 
-    <select id="rzList" resultType="com.zjw.oa.entity.Rz" parameterType="com.zjw.oa.entity.Rz">
+    <select id="rzList" resultType="com.zjw.oa.entity.Rz"  parameterType="java.lang.String">
         select r.*,u.* from rz r,user u where r.userId=u.userId
-        <if test="userId!=null and userId!= ''">
-            and r.userId=#{userId}
-        </if>
-        <if test="rzTime!=null and rzTime!= ''">
-            and r.rzTime=#{rzTime}
+        <if test="rzTime!=null and rzTime!=''">
+            and DATE_FORMAT(r.rzTime,'%Y-%m-%d')=#{rzTime}
         </if>
         order by rzTime desc
     </select>

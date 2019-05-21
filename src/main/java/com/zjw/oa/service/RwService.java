@@ -18,6 +18,6 @@ public interface RwService {
     void delRw(Rw rw)throws Exception;
     void updateRw(Rw rw)throws Exception;
     void addRw(Rw rw)throws Exception;
-    List<Rz> rzList(Rz rz);
+    List<Rz> rzList(String rz);
     void addRz(Rz rz)throws Exception;
 }

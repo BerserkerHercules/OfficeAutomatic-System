@@ -37,7 +37,7 @@ public class FileController {
             String suffixName = fileName.substring(fileName.lastIndexOf("."));
             log.info("文件的后缀名为：" + suffixName);
             // 设置文件存储路径
-            String filePath = "D:\\Users\\Downloads";
+            String filePath = "D:/Users/Downloads";
             String path = filePath + fileName;
             File dest = new File(path);
             // 检测是否存在目录
@@ -61,7 +61,7 @@ public class FileController {
         BufferedOutputStream stream = null;
         for (int i = 0; i < files.size(); ++i) {
             file = files.get(i);
-            String filePath = "D:\\Users\\Downloads";
+            String filePath = "D:/Users/Downloads";
             if (!file.isEmpty()) {
                 try {
                     byte[] bytes = file.getBytes();
@@ -86,7 +86,7 @@ public class FileController {
     public String downloadFile(String fileName, HttpServletResponse response) {
         if (fileName != null) {
             //设置文件路径
-            File file = new File("/Users/dalaoyang/Documents/"+fileName);
+            File file = new File("D:/Users/Downloads"+fileName);
             //File file = new File(realPath , fileName);
             if (file.exists()) {
                 response.setContentType("application/force-download");// 设置强制下载不打开
