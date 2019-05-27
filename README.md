@@ -1,5 +1,5 @@
 # 毕业设计
-## 基于 springboot+vue+elementui 的办公自动化系统设计
+## 基于 springboot+vue+elementui 的办公自动化系统设计(前端代码在oa.7z里)
 
 ### 系统主要功能：
 #### 1、统一的信息发布平台：公告栏，公司活动，项目进度，公司周报
