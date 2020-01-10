@@ -8,13 +8,6 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 
-
-/**
- * 描述:
- *
- * @author gqf
- * @date 2015年5月13日
- */
 public class DateUtil {
 
     public static String dateToString(Date date, String format) {
