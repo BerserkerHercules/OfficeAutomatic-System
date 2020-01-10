@@ -18,7 +18,7 @@ SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
 -- ----------------------------
--- Table structure for dk
+-- Table structure for dk 打卡
 -- ----------------------------
 DROP TABLE IF EXISTS `dk`;
 CREATE TABLE `dk`  (
@@ -27,7 +27,7 @@ CREATE TABLE `dk`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Table structure for gsgg
+-- Table structure for gsgg 公司公告
 -- ----------------------------
 DROP TABLE IF EXISTS `gsgg`;
 CREATE TABLE `gsgg`  (
@@ -46,7 +46,7 @@ INSERT INTO `gsgg` VALUES (1, '五一长假', '公司各部门：     “年会�
 INSERT INTO `gsgg` VALUES (2, '公告2', '促进公司的企业文化建设，同时计划20XX年年会邀请供应商参加，分享公司一年来的业绩成果，以快乐开心的气氛，加强与供应商的合作和沟通。\r\n   0XX年年会主题：激情、创新、融合、跨越     为更好的组织20XX年公司年会，通知如下：     1、公司组织文艺节目演出，要求以部门为单位上报演出节目。每个部门都必须有节目。人员比较少的部门可以组合。', '2019-05-16 14:59:56', 1);
 
 -- ----------------------------
--- Table structure for hytz
+-- Table structure for hytz 会议通知
 -- ----------------------------
 DROP TABLE IF EXISTS `hytz`;
 CREATE TABLE `hytz`  (
