@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Mapper;
 import java.util.List;
 
 /**
- * Description
+ * Description 请假申请MAPPER
  *
  * @author ZhengJiawei
  * @date 2019-03-21 10:46:50
