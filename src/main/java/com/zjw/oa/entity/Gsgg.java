@@ -1,6 +1,8 @@
 package com.zjw.oa.entity;
 
-
+/**
+* gongsi gonggao 实体类
+**/
 public class Gsgg {
 
   private int ggId;
