@@ -17,15 +17,6 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-
-/**
- * @author dalaoyang
- * @Description
- * @project springboot_learn
- * @package com.dalaoyang.Controller
- * @email yangyang@dalaoyang.cn
- * @date 2018/4/9
- */
 @RestController
 @RequestMapping(value = "/file")
 public class FileController {
