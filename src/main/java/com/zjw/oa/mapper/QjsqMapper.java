@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Description 请假申请MAPPER
  *
- * @author ZhengJiawei
+ * @author dddz97
  * @date 2019-03-21 10:46:50
  */
 @Mapper
