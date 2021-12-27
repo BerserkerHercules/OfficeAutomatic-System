@@ -1,7 +1,6 @@
 import axios from 'axios';
 
-let base = 'https://littlepros.mynatapp.cc';
-// let base = 'http://azkz2z.natappfree.cc';
+let base = 'http://localhost:8080/';
 
 export const requestLogin = params => { return axios.post(`${base}/user/login`, params).then(res => res.data); };
 //公告
