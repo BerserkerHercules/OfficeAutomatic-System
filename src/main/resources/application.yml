@@ -12,3 +12,6 @@ spring:
 mybatis:
   typeAliasesPackage: com.zjw.oa.entity
   mapperLocations: classpath:mapper/*.xml
+server:
+  #端口号
+  port: 8081
