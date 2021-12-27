@@ -27,3 +27,13 @@
 + 管理公司信息发布平台；
 + 日志查询；
 + 查看所有人的出勤记录；权限管理等信息
+
+简略写下启动过程：
+后端部分：
+1、安装好数据库，运行/doc/sql/oa.sql文件
+2、数据库、端口、mybatis配置在 /src/main/resources/application.yml 下
+3、启动OaApplication.java
+前端部分：
+1、安装好node.js
+2、在 /oa 文件夹下，启动这个vue项目，vue到后台的接口配置在 /oa/src/api/api.js 下，端口有冲突都可以改
+
