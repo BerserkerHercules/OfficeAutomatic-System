@@ -18,10 +18,12 @@
     </select>
 
     <select id="getQj" parameterType="com.zjw.oa.entity.Qjsq"  resultType="com.zjw.oa.entity.Qjsq">
-        select * from qjsq where 1=1
-        <if test="qjId!=null and qjId !=''">
-            and qjId=#{qjId}
-        </if>
+        select * from qjsq
+        <where>
+            <if test="qjId!=null and qjId !=''">
+                and qjId=#{qjId}
+            </if>
+        </where>
     </select>
 
     <update id="agreeQj" parameterType="com.zjw.oa.entity.Qjsq">

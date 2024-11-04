@@ -14,7 +14,7 @@ import java.util.List;
  */
 public interface QjsqService {
 
-    void addQjsq(Qjsq qjsq) throws Exception;
+    Integer addQjsq(Qjsq qjsq);
 
     List<Qjsq> getQjList(Qjsq qjsq);
 

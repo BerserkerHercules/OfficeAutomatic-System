@@ -16,7 +16,7 @@ import java.util.List;
 @Mapper
 public interface QjsqMapper {
 
-    void addQjsq(Qjsq qjsq) throws Exception;
+    void addQjsq(Qjsq qjsq);
 
     List<Qjsq> getQjList(Qjsq qjsq);
 
