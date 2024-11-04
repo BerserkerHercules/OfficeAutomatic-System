@@ -27,16 +27,22 @@ public class QjsqServiceImpl implements QjsqService {
     private UserMapper userMapper;
 
     @Override
-    public void addQjsq(Qjsq qjsq) throws Exception {
-        qjsqMapper.addQjsq(qjsq);
+    public Integer addQjsq(Qjsq qjsq) {
+        if (qjsq.getQjyy() == null || qjsq.getKsTime() == null || qjsq.getJsTime() == null || qjsq.getUserId() == 0) {
+            return 0;
+        } else {
+            qjsqMapper.addQjsq(qjsq);
+            return 1;
+        }
     }
+
 
     @Override
     public List<Qjsq> getQjList(Qjsq qjsq) {
         User u = new User();
         u.setUserId(qjsq.getUserId());
         User user = userMapper.getUser(u);
-        if(user.getPermission()==1){
+        if (user.getPermission() == 1) {
             Qjsq q = new Qjsq();
             return qjsqMapper.getQjList(q);
         }
@@ -50,6 +56,10 @@ public class QjsqServiceImpl implements QjsqService {
 
     @Override
     public void agreeQj(Qjsq qjsq) throws Exception {
-        qjsqMapper.agreeQj(qjsq);
+        if (qjsq.getQjId()==0 || qjsq.getQjzt()==null){
+            throw new Exception();
+        }else {
+            qjsqMapper.agreeQj(qjsq);
+        }
     }
 }
