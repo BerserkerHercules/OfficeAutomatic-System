@@ -1,4 +1,3 @@
-毕业设计
 ## 基于 springboot+vue+elementui 的办公自动化系统设计(前端代码在oa文件夹里)
 
 ### 系统主要功能：
