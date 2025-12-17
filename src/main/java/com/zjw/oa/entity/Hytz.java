@@ -5,7 +5,7 @@ public class Hytz {
 
   private int hyId;
   private String hynr;
-  private java.sql.Timestamp hyTime;
+  private Date  hyTime;
   private String hydd;
   private int hybtzr;
   private int hyztr;
@@ -29,11 +29,11 @@ public class Hytz {
   }
 
 
-  public java.sql.Timestamp getHyTime() {
+  public Date  getHyTime() {
     return hyTime;
   }
 
-  public void setHyTime(java.sql.Timestamp hyTime) {
+  public void setHyTime(Date  hyTime) {
     this.hyTime = hyTime;
   }
 

@@ -8,7 +8,7 @@ public class Gsgg {
   private int ggId;
   private String ggTitle;
   private String ggNr;
-  private java.sql.Timestamp ggTime;
+  private Date  ggTime;
   private int isZs;
 
 
@@ -39,11 +39,11 @@ public class Gsgg {
   }
 
 
-  public java.sql.Timestamp getGgTime() {
+  public Date  getGgTime() {
     return ggTime;
   }
 
-  public void setGgTime(java.sql.Timestamp ggTime) {
+  public void setGgTime(Date  ggTime) {
     this.ggTime = ggTime;
   }
 
